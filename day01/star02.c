@@ -17,7 +17,6 @@ int read_input(char *fname, int *data) {
 
     while (fgets(line, sizeof(line), fp)) {
         if (line[0] == '\n' || line[0] == '\r') {
-            n++;
             data[n++] = calories;
             calories = 0;
         } 
