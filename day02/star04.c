@@ -11,14 +11,8 @@ int read_input(char *fname, int data[][2]) {
     char yours = 0;
 
     while (fscanf(fp, "%c %c\n", &opp, &yours) == 2) {
-        if (opp == 'A') data[n][0] = 0;
-        else if (opp == 'B') data[n][0] = 1;
-        else if (opp == 'C') data[n][0] = 2;
-
-        if (yours == 'X') data[n][1] = 0;
-        else if (yours == 'Y') data[n][1] = 1;
-        else if (yours == 'Z') data[n][1] = 2;
-
+        data[n][0] = opp - 'A';
+        data[n][1] = yours - 'X';
         n++;
     }
     return n;
